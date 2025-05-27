@@ -4,14 +4,13 @@
 
 #ifndef VILLANO_H
 #define VILLANO_H
-#include"Personaje.H"
+#include"Personaje.h"
 #include<string>
 
 using namespace std;
 
-class Villano {
+class Villano:public Personaje{
 private:
-    string nombre;
     string tipo;
 
 public:
@@ -19,10 +18,8 @@ public:
     Villano(string nombre, string tipo, int s, int su, int a, int def, int vel);
 
     //getter
-    string getNombre()const;
     string getTipo() const ;
     //setter
-    void setNombre(string nombre);
     void setTipo(string tipo);
 
 };

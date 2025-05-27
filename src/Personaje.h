@@ -4,11 +4,13 @@
 
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
+#include <string>
 
 
 using namespace std;
 class Personaje {
 private:
+    string nombre;
     int salud;
     int suerte;
     int ataque;
@@ -17,8 +19,9 @@ private:
 
 public:
     Personaje();
-    Personaje(int salud, int suerte, int ataque, int defensa, int velocidad);
+    Personaje(string nombre,int salud, int suerte, int ataque, int defensa, int velocidad);
     //getters
+    string getNombre()const;
     int getSalud();
     int getSuerte();
     int getAtaque();

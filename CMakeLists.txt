@@ -3,6 +3,8 @@ project(NatalKombat)
 
 set(CMAKE_CXX_STANDARD 20)
 
+include_directories(src)
+
 add_executable(NatalKombat main.cpp
         src/Personaje.cpp
         src/Personaje.h

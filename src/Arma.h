@@ -11,22 +11,25 @@ using namespace std;
 class Arma {
 private:
     string nombre;
-    int mejoraDefensa;
     int mejoraAtaque;
+    int mejoraDefensa;
+
 
 public:
     Arma();
-    Arma(string nombre, int mejoraDefensa, int mejoraAtaque);
+    Arma(string nombre, int mejoraAtaque,int mejoraDefensa);
 
     //getters
     string getNombre()const;
-    int getMejoraDef()const;
     int getMejoraAtaque()const;
+    int getMejoraDef()const;
+
 
     //setter
     void setNombre(string nombre);
-    void setMejoraDef(int mejoraDefensa);
     void setMejoraAtaque(int mejoraAtaque);
+    void setMejoraDef(int mejoraDefensa);
+
     //metodo
     void aplicarEfecto(Heroe& h);  //se que en el UML puse perosnaje,
                                     //pero quiero que sea mas espcifico osea q solos

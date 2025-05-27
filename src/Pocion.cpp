@@ -3,6 +3,8 @@
 //
 
 #include "Pocion.h"
+#include"Heroe.h"
+
 Pocion::Pocion(const string& name, const int mejoraSalud, const int mejoraSuerte) {
     this->name = name;
     this->mejoraSalud = mejoraSalud;

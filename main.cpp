@@ -1,14 +1,132 @@
 #include <iostream>
+#include "Heroe.h"
+#include "Villano.h"
+#include "Inventario.h"
+#include "Pocion.h"
+#include"Arma.h"
+#include"Armadura.h"
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+using namespace std;
+
 int main() {
-//crear personaje
+    //crear personaje
 
+    Heroe h1("Mandragora",100,50,90,60,45 );
+    Heroe h2("Cálamo",100,35,80,75,60 );
+    Heroe h3("Belladona",100,60,80,55,60 );
+    Heroe h4("Ginseng",100,80,50,70,50 );
+    Heroe h5("Artemisa",100,60,60,70,20 );
+    Heroe h6("Valeriana",100,70,20,95,60 );
+
+    //villano
+
+    Villano Vil1("Sistrurus","Soldado",100,20,40,35,20 ); //S1
+    Villano Vil2("Vipera","Soldado",100,20,40,35,25 ); //S2
+    Villano Vil3("Cerastes","Soldado",100,25,45,40,30 ); //S3
+    Villano Vil4("Atheris","Soldado",100,30,50,50,30 ); //S3
+    Villano Vil5("Hydrophis","Soldado",100,30,53,50,35 ); //S4
+    Villano Vil6("Calloselasma","Soldado",100,33,55,50,35 ); //s5
+    Villano Vil7("Pseudonaja","Soldado",100,35,55,55,35 ); //S6
+    Villano Vil8("Bothrops","Soldado",100,35,55,55,35); //S6
+    Villano Vil9("Dispholidus","Soldado",100,40,55,55,30 ); //S7
+    Villano Vil10("Echis","Soldado",100,40,55,55,40 ); //S7
+    Villano Vil11("Naja","Soldado",100,40,55,55,40 ); //S8
+    Villano Vil12("DeathAdder","Minijefe",100,45,58,55,40 );//S8
+    Villano Vil13("Bushmaster","Minijefe",100,50,60,55,40 ); //S9
+    Villano Vil14("Krait","Minijefe",100,50,60,60,40 ); //S9
+    Villano Vil15("Mamba","Jefe",100,60,70,70,60 );//S10
+
+    // cout << "¡Comienza el combate!\n";
+    // cout << "Salud inicial del héroe: " << h1.getSalud() << "\n";
+
+    Inventario inventario;
+
+    //pociones --> 17
+    vector<Pocion>pociones= {
+        Pocion ("Poción de Vida", 50, 0),
+        Pocion ("Elixir fortuna", 0, 30),
+        Pocion ("Brebaje vital", 30, 20),
+        Pocion ("Tonico del destino", 10, 20),
+        Pocion ("Suero de energía", 40, 0),
+        Pocion ("Suerte ciega", 0, 50),
+        Pocion ("Infusion curativa", 25, 10),
+        Pocion ("Agua del oráculo", 15, 25),
+        Pocion ("Elixir brillante", 20, 15),
+        Pocion ("Té de las etsrellas", 10, 40),
+        Pocion ("Nectar de vida", 60, 0),
+        Pocion ("Pocion del azar", 20, 30),
+        Pocion ("Etracto de esperanza", 35, 10),
+        Pocion ("Gotas de suerte", 0, 45),
+        Pocion ("Tonico de acero", 55, 5),
+        Pocion ("Poción del gruadian", 45, 5),
+        Pocion ("Brebaje del valiente", 25, 20),
+    };
+    for (auto i : pociones) {
+        inventario.agregarPocion(i);
+    }
+   // cout<<"Pociones cargadas al inventario"<<pociones.size()<<endl;
+   // for (const auto &i : pociones) {
+    //    cout << "Poción agregada: " << i.getName()<<endl;
+  //  }
+
+    //Armas 17
+    vector<Arma> armas={
+        Arma ("Espada del alba", 40, 10),
+            Arma ("Martillo Celeste", 45, 8),
+        Arma ("Hacha del coloso", 50, 5),
+        Arma ("Lanza del silencio", 35, 15),
+        Arma ("Dagas del viento", 25, 10),
+        Arma ("Arco de sombras", 30, 12),
+        Arma ("Cuchillas de medianoche", 38, 7),
+        Arma ("Mega Espada", 42, 13),
+        Arma ("Maza del titan", 48, 6),
+        Arma ("Katana del eclipse", 36, 9),
+        Arma ("Lanza de la Tempestad", 44, 11),
+        Arma ("Espada del vacio", 50, 0),
+        Arma ("Aguijon de hielo", 32, 14),
+        Arma ("Garrote de guerra", 39, 10),
+        Arma ("Dagas del engaño", 28, 12),
+        Arma ("Filo del trueno", 47, 5),
+        Arma ("Escudo", 9, 41),
+
+    };
+    for (auto i : armas) {
+        inventario.agregarArma(i);
+    }
+
+    //Aramadura 16
+    vector<Armadura> armaduras={
+    Armadura ("Armadura del guardian", 40),
+    Armadura ("Coraza de hierro", 35),
+    Armadura ("Armadura de  la luz", 28),
+    Armadura ("Escamas del dragon", 40),
+    Armadura ("Armadura del centinela", 33),
+    Armadura ("Coraza de los Antiguos", 37),
+    Armadura ("Armadura del cristal sagrado", 26),
+    Armadura ("Armadura de Guerra Élfica", 32),
+    Armadura ("Malla del Trueno", 31),
+    Armadura ("Armadura del Invierno", 29),
+    Armadura ("Armadura del León Dorado", 36),
+    Armadura ("Coraza de la Tempestad", 34),
+    Armadura ("Ala de Acero", 40),
+    Armadura ("Armadura del Olvido", 39),
+    Armadura ("Manto de los Titanes ", 38),
+    Armadura ("Armadura de la Eternidad ", 42),
+};
+    for (auto i : armaduras) {
+        inventario.agregarArmadura(i);
+    }
+
+
+
+ //   h1.usarItem(inventario, "Elixir");
+   // cout << "Salud después de usar poción: " << h1.getSalud() << "\n";
+
+    //h1.atacar(Vil1);
+    //cout << "Salud del villano después del ataque: " << Vil1.getSalud() << "\n";
 
     return 0;
 }
-
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
 //  Also, you can try interactive lessons for CLion by selecting

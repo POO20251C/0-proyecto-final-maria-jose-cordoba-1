@@ -2,39 +2,47 @@
 // Created by majo on 26/05/2025.
 //
 
+#include"Heroe.h"
 #include "Arma.h"
-Arma::Arma(string nombre, int mejoraDefensa, int mejoraAtaque) {
+
+
+Arma::Arma(string nombre, int mejoraAtaque,int mejoraDefensa) {
     this->nombre = nombre;
-    this->mejoraDefensa = mejoraDefensa;
     this->mejoraAtaque = mejoraAtaque;
+    this->mejoraDefensa = mejoraDefensa;
+
 }
 
 //getters
 string Arma::getNombre()const {
     return nombre;
 }
-int Arma::getMejoraDef()const {
-    return mejoraDefensa;
-}
 int Arma::getMejoraAtaque()const {
     return mejoraAtaque;
 }
+int Arma::getMejoraDef()const {
+    return mejoraDefensa;
+}
+
 
 //setters
 void Arma::setNombre(string nombre) {
     this->nombre = nombre;
 }
-void Arma::setMejoraDef(int mejoraDefensa) {
-    this->mejoraDefensa = mejoraDefensa;
-}
 void Arma::setMejoraAtaque(int mejoraAtaque) {
     this->mejoraAtaque = mejoraAtaque;
 }
+void Arma::setMejoraDef(int mejoraDefensa) {
+    this->mejoraDefensa = mejoraDefensa;
+}
+
 
 //metodo
 void Arma::aplicarEfecto(Heroe &h) {
+    int nuevoAtaque= h.getAtaque()+mejoraAtaque;
     int nuevaDefensa= h.getDefensa()+mejoraDefensa;  //al principio use setDefensa pero debo usarlo en get
-    int nuevoAtaque= h.getAtaque()+mejoraAtaque;     //pero set-->void tons no funciona
-    h.setDefensa(nuevaDefensa);
+         //pero set-->void tons no funciona
     h.setAtaque(nuevoAtaque);
+    h.setDefensa(nuevaDefensa);
+
 }

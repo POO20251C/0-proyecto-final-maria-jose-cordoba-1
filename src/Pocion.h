@@ -8,6 +8,7 @@
 #include<string>
 using namespace std;
 
+class Heroe;
 
 class Pocion {
 private:

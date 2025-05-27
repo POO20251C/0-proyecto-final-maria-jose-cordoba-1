@@ -4,7 +4,8 @@
 
 #include "Personaje.h"
 
-Personaje::Personaje(int s, int su, int a, int def, int vel) {
+Personaje::Personaje(const string nombre,int s, int su, int a, int def, int vel) {
+    this->nombre=nombre;
     this->salud=s;
     this->suerte=su;
     this->ataque=a;
@@ -14,6 +15,9 @@ Personaje::Personaje(int s, int su, int a, int def, int vel) {
 }
 
 //getters
+string Personaje::getNombre()const {
+    return nombre;
+}
 int Personaje::getSalud() {
     return salud;
 }

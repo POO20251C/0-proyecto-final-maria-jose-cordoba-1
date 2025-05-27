@@ -3,6 +3,7 @@
 //
 
 #include "Armadura.h"
+#include"Heroe.h"
 Armadura::Armadura(string nombre, int mejoraDefensa) {
     this->nombre = nombre;
     this->mejoraDefensa = mejoraDefensa;

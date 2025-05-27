@@ -5,9 +5,11 @@
 #ifndef ARMADURA_H
 #define ARMADURA_H
 #include<string>
-#include"Heroe.h"
+
 
 using namespace std;
+
+class Heroe;
 
 class Armadura {
 private:

@@ -1,0 +1,23 @@
+# ninja log v6
+20	398	7700021098433895	CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj	24e6e070a6f109ce
+37	1004	7700030982597991	CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj	24e6e070a6f109ce
+56	1009	7700030982804753	CMakeFiles/NatalKombat.dir/src/Villano.cpp.obj	bd6de0515f136f0f
+30	961	7700058378834844	CMakeFiles/NatalKombat.dir/src/Villano.cpp.obj	bd6de0515f136f0f
+48	963	7700058379024339	CMakeFiles/NatalKombat.dir/src/Arma.cpp.obj	2880156e36f22b2f
+15	964	7700058378687102	CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj	24e6e070a6f109ce
+72	969	7700058379256409	CMakeFiles/NatalKombat.dir/src/Pocion.cpp.obj	3acc544d8e58d394
+62	992	7700058379157498	CMakeFiles/NatalKombat.dir/src/Armadura.cpp.obj	e87c5d74189ab03f
+37	1334	7700058378916290	CMakeFiles/NatalKombat.dir/src/Inventario.cpp.obj	1d9d3f8de854b1e4
+18	696	7700065453809238	CMakeFiles/NatalKombat.dir/src/Heroe.cpp.obj	726e8bb292e888f2
+9	873	7700065453725725	CMakeFiles/NatalKombat.dir/main.cpp.obj	b8b0d52d5391c0cc
+26	1038	7700065453898449	CMakeFiles/NatalKombat.dir/src/Inventario.cpp.obj	1d9d3f8de854b1e4
+1038	1396	7700065464007095	NatalKombat.exe	b1af4d76ee5fa799
+42	1001	7700067300998951	CMakeFiles/NatalKombat.dir/main.cpp.obj	b8b0d52d5391c0cc
+1002	1225	7700067310599485	NatalKombat.exe	b1af4d76ee5fa799
+34	1007	7700075003841450	CMakeFiles/NatalKombat.dir/main.cpp.obj	b8b0d52d5391c0cc
+1008	1235	7700075013583830	NatalKombat.exe	b1af4d76ee5fa799
+44	907	7700151460995362	CMakeFiles/NatalKombat.dir/src/Heroe.cpp.obj	726e8bb292e888f2
+65	908	7700151461208998	CMakeFiles/NatalKombat.dir/src/Arma.cpp.obj	2880156e36f22b2f
+54	1293	7700151461099056	CMakeFiles/NatalKombat.dir/src/Inventario.cpp.obj	1d9d3f8de854b1e4
+28	1352	7700151460845356	CMakeFiles/NatalKombat.dir/main.cpp.obj	b8b0d52d5391c0cc
+1352	1645	7700151474071258	NatalKombat.exe	b1af4d76ee5fa799
