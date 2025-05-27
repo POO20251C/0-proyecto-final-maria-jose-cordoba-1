@@ -19,4 +19,7 @@ add_executable(NatalKombat main.cpp
         src/Armadura.cpp
         src/Armadura.h
         src/Pocion.cpp
-        src/Pocion.h)
+        src/Pocion.h
+        src/Sala.cpp
+        src/Sala.h
+)

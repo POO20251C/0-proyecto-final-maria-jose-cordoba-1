@@ -20,8 +20,7 @@ public:
     Heroe();
     Heroe(string nombre, int s, int su, int a, int def, int vel);
 
-//getter
-    string getNombre() const;
+
     //setter
     void setNombre(string nombre);  //al parecer aca no se pone const solo en el cpp:Clang-Tidy: Parameter 'nombre' is const-qualified in the function declaration; const-qualification of parameters only has an effect in function definitions
     //metodo
