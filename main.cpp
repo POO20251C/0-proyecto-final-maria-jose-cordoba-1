@@ -2,12 +2,14 @@
 #include "Heroe.h"
 #include "Villano.h"
 #include "Inventario.h"
-#include "Pocion.h"
 #include"Arma.h"
 #include"Armadura.h"
 #include"Sala.h"
+#include"Juego.h"
+#include"Pocion.h"
 
 using namespace std;
+
 
 int main() {
 //crear personaje
@@ -65,10 +67,6 @@ Pocion ("Brebaje del valiente", 25, 20),
 for (auto i : pociones) {
 inventario.agregarPocion(i);
 }
-// cout<<"Pociones cargadas al inventario"<<pociones.size()<<endl;
-// for (const auto &i : pociones) {
-// cout << "Poción agregada: " << i.getName()<<endl;
-// }
 
 //Armas 17
 vector<Arma> armas={
@@ -89,6 +87,7 @@ Arma ("Garrote de guerra", 39, 10),
 Arma ("Dagas del engaño", 28, 12),
 Arma ("Filo del trueno", 47, 5),
 Arma ("Escudo", 9, 41),
+Arma ("Arma rara",60,50)
 
 };
 for (auto i : armas) {
@@ -143,18 +142,57 @@ Sala s8("Sala del Tóxico Real",8,villanosSala8);
 Sala s9("Sala del Silencio Letal ",9,villanosSala9);
 Sala s10("Sala del Fin",10, villanosSala10);
 
+    std::vector<Sala> salas = {s1, s2, s3, s4, s5, s6, s7, s8, s9, s10};
 
-// h1.usarItem(inventario, "Elixir");
-// cout << "Salud después de usar poción: " << h1.getSalud() << "\n";
+//Juego
+    Juego juego(salas);
 
-//h1.atacar(Vil1);
-//cout << "Salud del villano después del ataque: " << Vil1.getSalud() << "\n";
+    juego.iniciar();
 
-return 0;
+juego.cargarScores();
+
+bool jugando=true;
+while (jugando) {
+    juego.mostrarMenu();
+
+    int opcion;
+    cout<<"Ingrese una opcion:";
+    cin>>opcion;
+
+    switch (opcion) {
+        case 1: {
+            vector<Heroe*> heroesElegidos=juego.escogerHeroes();
+            break;
+        }
+        case 2: {
+            juego.iniciar();
+            break;
+        }
+        case 3:{
+            juego.mostrarTop5();
+            break;
+        }
+        case 4: {
+            cout<<"Gracias por jugar:)!"<<endl;
+            jugando=false;
+            break;
+        }
+        default:{
+            cout<<"Opcion no valida!"<<endl;
+            cin.clear();
+            break;
+        }
+    }
 }
+    //score
+    //return 0;
+}
+
+
+
+
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
 // Also, you can try interactive lessons for CLion by selecting
 // 'Help | Learn IDE Features' from the main menu.
 
- 

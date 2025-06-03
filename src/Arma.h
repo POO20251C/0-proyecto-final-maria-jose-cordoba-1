@@ -6,27 +6,29 @@
 #define ARMA_H
 #include<string>
 #include"Heroe.h"
-using namespace std;
+
+
+class Heroe;
 
 class Arma {
 private:
-    string nombre;
+    std::string nombre;
     int mejoraAtaque;
     int mejoraDefensa;
 
 
 public:
     Arma();
-    Arma(string nombre, int mejoraAtaque,int mejoraDefensa);
+    Arma(const std::string& nombre, int mejoraAtaque,int mejoraDefensa);
 
     //getters
-    string getNombre()const;
-    int getMejoraAtaque()const;
-    int getMejoraDef()const;
+    [[nodiscard]]std::string getNombre()const;
+    [[nodiscard]]int getMejoraAtaque()const;
+    [[nodiscard]]int getMejoraDef()const;
 
 
     //setter
-    void setNombre(string nombre);
+    void setNombre(const std::string& nombre);
     void setMejoraAtaque(int mejoraAtaque);
     void setMejoraDef(int mejoraDefensa);
 

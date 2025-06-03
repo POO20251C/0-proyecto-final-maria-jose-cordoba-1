@@ -1,12 +1,12 @@
 //
 // Created by majo on 26/05/2025.
 //
-
+#include"Arma.h"
 #include"Heroe.h"
-#include "Arma.h"
 
 
-Arma::Arma(string nombre, int mejoraAtaque,int mejoraDefensa) {
+
+Arma::Arma(const std::string& nombre, int mejoraAtaque,int mejoraDefensa) {
     this->nombre = nombre;
     this->mejoraAtaque = mejoraAtaque;
     this->mejoraDefensa = mejoraDefensa;
@@ -14,7 +14,7 @@ Arma::Arma(string nombre, int mejoraAtaque,int mejoraDefensa) {
 }
 
 //getters
-string Arma::getNombre()const {
+std::string Arma::getNombre()const {
     return nombre;
 }
 int Arma::getMejoraAtaque()const {
@@ -26,7 +26,7 @@ int Arma::getMejoraDef()const {
 
 
 //setters
-void Arma::setNombre(string nombre) {
+void Arma::setNombre(const std::string& nombre) {
     this->nombre = nombre;
 }
 void Arma::setMejoraAtaque(int mejoraAtaque) {

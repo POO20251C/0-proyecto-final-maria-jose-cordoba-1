@@ -112,6 +112,27 @@ build CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj: CXX_COMPILER__NatalKombat_uns
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
+build CMakeFiles/NatalKombat.dir/src/Mazmorra.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Mazmorra.cpp || cmake_object_order_depends_target_NatalKombat
+  DEP_FILE = CMakeFiles\NatalKombat.dir\src\Mazmorra.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
+  OBJECT_DIR = CMakeFiles\NatalKombat.dir
+  OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
+
+build CMakeFiles/NatalKombat.dir/src/Score.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Score.cpp || cmake_object_order_depends_target_NatalKombat
+  DEP_FILE = CMakeFiles\NatalKombat.dir\src\Score.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
+  OBJECT_DIR = CMakeFiles\NatalKombat.dir
+  OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
+
+build CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Juego.cpp || cmake_object_order_depends_target_NatalKombat
+  DEP_FILE = CMakeFiles\NatalKombat.dir\src\Juego.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
+  OBJECT_DIR = CMakeFiles\NatalKombat.dir
+  OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target NatalKombat
@@ -120,7 +141,7 @@ build CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj: CXX_COMPILER__NatalKombat_uns
 #############################################
 # Link the executable NatalKombat.exe
 
-build NatalKombat.exe: CXX_EXECUTABLE_LINKER__NatalKombat_Debug CMakeFiles/NatalKombat.dir/main.cpp.obj CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj CMakeFiles/NatalKombat.dir/src/Heroe.cpp.obj CMakeFiles/NatalKombat.dir/src/Villano.cpp.obj CMakeFiles/NatalKombat.dir/src/Inventario.cpp.obj CMakeFiles/NatalKombat.dir/src/Arma.cpp.obj CMakeFiles/NatalKombat.dir/src/Armadura.cpp.obj CMakeFiles/NatalKombat.dir/src/Pocion.cpp.obj CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj
+build NatalKombat.exe: CXX_EXECUTABLE_LINKER__NatalKombat_Debug CMakeFiles/NatalKombat.dir/main.cpp.obj CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj CMakeFiles/NatalKombat.dir/src/Heroe.cpp.obj CMakeFiles/NatalKombat.dir/src/Villano.cpp.obj CMakeFiles/NatalKombat.dir/src/Inventario.cpp.obj CMakeFiles/NatalKombat.dir/src/Arma.cpp.obj CMakeFiles/NatalKombat.dir/src/Armadura.cpp.obj CMakeFiles/NatalKombat.dir/src/Pocion.cpp.obj CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj CMakeFiles/NatalKombat.dir/src/Mazmorra.cpp.obj CMakeFiles/NatalKombat.dir/src/Score.cpp.obj CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\NatalKombat.dir

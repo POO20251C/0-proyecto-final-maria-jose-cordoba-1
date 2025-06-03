@@ -6,32 +6,32 @@
 #define POCION_H
 #include"Heroe.h"
 #include<string>
+
 using namespace std;
 
 class Heroe;
 
 class Pocion {
 private:
-    string name;
+    std::string name;
     int mejoraSalud;
     int mejoraSuerte;
 
 public:
     Pocion();
-    Pocion(const string& name,int mejoraSalud, int mejoraSuerte);
+    Pocion(const std::string& name,int mejoraSalud, int mejoraSuerte);
 
     //getters
-    string getName()const;
-    int getMejoraSalud()const;
-    int getMejoraSuerte()const;
+    [[nodiscard]]std::string getName()const;
+    [[nodiscard]]int getMejoraSalud()const;
+    [[nodiscard]] int getMejoraSuerte()const;
 
     //setters
-    void setName(string name);
+    void setName(const std::string& name);
     void setMejoraSalud(int mejoraSalud);
     void setMejoraSuerte(int mejoraSuerte);
     //metodo
     void aplicarEfecto(Heroe& h);
-
 };
 
 

@@ -4,7 +4,7 @@
 
 #include "Villano.h"
 
-Villano::Villano(const string nombre, const string tipo, int s, int su, int a, int def, int vel)
+Villano::Villano(const string& nombre, const string tipo, int s, int su, int a, int def, int vel)
     : Personaje(nombre, s, su, a, def, vel) {
     this->tipo = tipo;
 }

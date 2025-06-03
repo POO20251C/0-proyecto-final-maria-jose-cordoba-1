@@ -9,8 +9,8 @@
 
 using namespace std;
 class Personaje {
-private:
-    string nombre;
+protected:
+    std::string nombre;
     int salud;
     int suerte;
     int ataque;
@@ -19,9 +19,9 @@ private:
 
 public:
     Personaje();
-    Personaje(string nombre,int salud, int suerte, int ataque, int defensa, int velocidad);
+    Personaje(const std::string& nombre,int salud, int suerte, int ataque, int defensa, int velocidad);
     //getters
-    string getNombre()const;
+    std::string getNombre()const;
     int getSalud();
     int getSuerte();
     int getAtaque();
@@ -29,6 +29,7 @@ public:
     int getVelocidad();
 
     //setters
+    virtual void setNombre(const std::string& nombre);
     void setSalud(int salud);
     void setSuerte(int suerte);
     void setAtaque(int ataque);

@@ -5,16 +5,15 @@
 #ifndef INVENTARIO_H
 #define INVENTARIO_H
 #include<string>
-#include "Pocion.h"
-#include "Arma.h"
-#include "Armadura.h"
 #include<vector>
-
-
-
+#include"Pocion.h"
+#include"Arma.h"
+#include"Armadura.h"
 
 using namespace std;
-
+class Pocion;
+class Arma;
+class Armadura;
 class Heroe;
 
 class Inventario {
@@ -30,9 +29,9 @@ public:
     Inventario();
     Inventario(int capacidadMaxima);
     //metodos
-    void agregarPocion(Pocion& pocion); //se pñone Pocion& pocion y no vector<Popcion> pocion como siempre poruqe asi se agrega de a 1 y no de muchos a la vez
-    void agregarArma(Arma& arma);
-    void agregarArmadura(Armadura& armadura);
+    void agregarPocion(const Pocion& pocion); //se pñone Pocion& pocion y no vector<Popcion> pocion como siempre poruqe asi se agrega de a 1 y no de muchos a la vez
+    void agregarArma(const Arma& arma);
+    void agregarArmadura(const Armadura& armadura);
     void mostrarInventario();
     void usarItem(const string &item, Heroe &heroe);  //la verdd no sabia q poidia poner olos dos jutnos pero bueno
                                                     //Heroe &heroe--> referencia de quien lo usa

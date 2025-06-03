@@ -2,10 +2,10 @@
 // Created by majo on 26/05/2025.
 //
 
-#include "Pocion.h"
+#include"Pocion.h"
 #include"Heroe.h"
 
-Pocion::Pocion(const string& name, const int mejoraSalud, const int mejoraSuerte) {
+Pocion::Pocion(const std::string& name, const int mejoraSalud, const int mejoraSuerte) {
     this->name = name;
     this->mejoraSalud = mejoraSalud;
     this->mejoraSuerte = mejoraSuerte;
@@ -13,7 +13,7 @@ Pocion::Pocion(const string& name, const int mejoraSalud, const int mejoraSuerte
 }
 
 //getters
-string Pocion::getName() const{
+std::string Pocion::getName() const{
     return this->name;
 }
 int Pocion::getMejoraSalud() const {
@@ -23,6 +23,10 @@ int Pocion::getMejoraSuerte() const {
     return this->mejoraSuerte;
 }
 //setters
+void Pocion::setName(const std::string& name) {
+    this->name = name;
+}
+
 void Pocion::setMejoraSalud(const int mej) {
     this->mejoraSalud = mej;
 }

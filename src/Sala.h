@@ -32,13 +32,13 @@ private:
  void agregarVillano(Villano* villano);
 
  //Metodos
- void batalla(vector<Heroe*> &heroes);
- void calcularDanoHeroe(Heroe& herido);
- void calcularDanoVillano(Villano& heridoEnemigo);
+ bool batalla(vector<Heroe*> &heroes);
+ //void calcularDanoHeroe(Heroe& herido);
+ //void calcularDanoVillano(Villano& heridoEnemigo);
  void regaloEspecial(vector<Heroe*> &heroes);
  bool verificarFinBatalla(const vector<Heroe*> &heroes);
  bool avanzar();
- void terminarJuego();
+ static void terminarJuego();
 
 
 };

@@ -11,16 +11,16 @@ using namespace std;
 
 class Villano:public Personaje{
 private:
-    string tipo;
+    std::string tipo;
 
 public:
     Villano();
-    Villano(string nombre, string tipo, int s, int su, int a, int def, int vel);
+    Villano(const std::string& nombre, string tipo, int s, int su, int a, int def, int vel);
 
     //getter
-    string getTipo() const ;
+    std::string getTipo() const ;
     //setter
-    void setTipo(string tipo);
+    void setTipo(std::string tipo);
 
 };
 

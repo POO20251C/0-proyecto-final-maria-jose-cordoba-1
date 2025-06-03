@@ -5,7 +5,7 @@
 #ifndef ARMADURA_H
 #define ARMADURA_H
 #include<string>
-
+#include"Heroe.h"
 
 using namespace std;
 
@@ -13,16 +13,16 @@ class Heroe;
 
 class Armadura {
 private:
-    string nombre;
+    std::string nombre;
     int mejoraDefensa;
 public:
     Armadura();
-    Armadura(string nombre, int mejoraDefensa);
+    Armadura(const std::string& nombre, int mejoraDefensa);
     //getters
-    string getNombre()const ;
-    int getMejoraDefensa()const ;
+    [[nodiscard]]std::string getNombre()const ;
+    [[nodiscard]]int getMejoraDefensa()const ;
 //stters
-    void setNombre(string nombre);
+    void setNombre(const std::string& nombre);
     void setMejoraDef(int mejoraDefensa);
     //metodo    //antes de segior pequeña explicacion, yo al principio tenia pensado usar herencia,
     void aplicarEfecto(Heroe& h); //puesto que podia hacer una clase item--> arma, etc dentro de inventario porque comparten el metood de aplicarefecto

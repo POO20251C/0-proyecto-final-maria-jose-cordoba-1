@@ -41,10 +41,10 @@ void Sala::setNumeroSala(const int nuS) {
 
 
 //metodo batalla //si me toco partirlos porq me perdi DURISIMO
-void Sala::batalla(vector<Heroe*>& heroes) {
+bool Sala::batalla(vector<Heroe*>& heroes) {
     if (VillanosAsignados.empty()) {
         cout<<"No hay villano en la sala"<<endl;
-        return;
+        return false; //cambie esto ahora es con bool por lo de mazmorra y los scores tons se agrega false y true
     }
     Inventario inventarioHeroes(15);
     cout<<"\nBATALLA ENNN"<<tipo<<"\n"<< "con enemigo:"<<VillanosAsignados[0]->getNombre()<<endl;
@@ -66,22 +66,22 @@ void Sala::batalla(vector<Heroe*>& heroes) {
                     inventarioHeroes.mostrarInventario();
                     cout<<"Elige tu item:";
                     string nombreItem;
-                    cin>>nombreItem;
+                    getline(cin>>ws,nombreItem); //busqye y es mejor para leer el nombre completo porq repito mucho la primera palabra jeje:)
 
                     heroe->usarItem(inventarioHeroes,nombreItem);
                 }
                 if (VillanosAsignados[0]->getSalud()<=0) {
                     cout<<"\nGanasteeee venciste a"<<VillanosAsignados[0]->getNombre()<<"\n";
-                    return; //termina la batalla :)
+                    return true; //termina la batalla :) //true--> ganas
                 }
             }
         }
         if (VillanosAsignados[0]->getSalud()>0) {
-            vector<Heroe*> heroes;  //buscar que queda vivo jeje
-            for (Heroe* heroe : heroes) {
-                if (heroe->getSalud()>0) {
-                    VillanosAsignados[0]->atacar(*heroe);
-                    cout <<VillanosAsignados[0]->getNombre()<<"ataca a"<<heroe->getNombre()<<"!\n";
+            //buscar que queda vivo jeje
+            for (Heroe* h : heroes) {
+                if (h->getSalud()>0) {
+                    VillanosAsignados[0]->atacar(*h);
+                    cout <<VillanosAsignados[0]->getNombre()<<"ataca a"<<h->getNombre()<<"!\n";
 
                     int heroesMuertos=0;
                     for (Heroe* heroe : heroes) {
@@ -90,7 +90,7 @@ void Sala::batalla(vector<Heroe*>& heroes) {
                     if (heroesMuertos>=2) {
                         cout <<"\nGame over ;(";
                         terminarJuego();
-                        return;
+                        return false; //false --> pierdes
                     }
                     break;
                 }

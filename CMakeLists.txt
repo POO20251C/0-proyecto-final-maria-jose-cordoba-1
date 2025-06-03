@@ -22,4 +22,10 @@ add_executable(NatalKombat main.cpp
         src/Pocion.h
         src/Sala.cpp
         src/Sala.h
+        src/Mazmorra.cpp
+        src/Mazmorra.h
+        src/Score.cpp
+        src/Score.h
+        src/Juego.cpp
+        src/Juego.h
 )

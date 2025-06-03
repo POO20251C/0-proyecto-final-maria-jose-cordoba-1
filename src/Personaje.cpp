@@ -4,7 +4,7 @@
 
 #include "Personaje.h"
 
-Personaje::Personaje(const string nombre,int s, int su, int a, int def, int vel) {
+Personaje::Personaje(const std::string& nombre,int s, int su, int a, int def, int vel) {
     this->nombre=nombre;
     this->salud=s;
     this->suerte=su;
@@ -15,7 +15,7 @@ Personaje::Personaje(const string nombre,int s, int su, int a, int def, int vel)
 }
 
 //getters
-string Personaje::getNombre()const {
+string Personaje::getNombre() const {
     return nombre;
 }
 int Personaje::getSalud() {
@@ -35,6 +35,9 @@ int Personaje::getVelocidad() {
 }
 
 //setters
+void Personaje::setNombre(const std::string& nombre) {
+    this->nombre=nombre;
+}
 
 void Personaje::setSalud(int s) {
     salud=s;

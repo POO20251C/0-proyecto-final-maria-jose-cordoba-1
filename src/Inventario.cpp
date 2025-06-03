@@ -3,10 +3,10 @@
 //
 
 #include "Inventario.h"
+#include"Pocion.h"
+#include"Arma.h"
+#include"Armadura.h"
 #include "Heroe.h"
-#include "Pocion.h"
-#include "Arma.h"
-#include "Armadura.h"
 #include<iostream>
 
 Inventario::Inventario(int cm) {
@@ -18,16 +18,20 @@ Inventario::Inventario() {
 }
 
 //metdos
-void Inventario::agregarPocion(Pocion& pocion) {
-    if ((int)this->pocion.size() + (int) armadura.size() + (int)arma.size() <capacidadMaxima){
+void Inventario::agregarPocion(const Pocion& pocion) {
+    if (static_cast<int>(this->pocion.size()) +
+        static_cast<int>(armadura.size()) +
+        static_cast<int>(arma.size()) < capacidadMaxima) {
         this->pocion.push_back(pocion);
     } else {
         cout <<"Inventario lleno, no se puede agregar pocion"<<endl;
 }
 }
 
-void Inventario::agregarArma(Arma& arma) {
-    if ((int)this->pocion.size()+(int)armadura.size()+(int)this->arma.size()<capacidadMaxima) {
+void Inventario::agregarArma(const Arma& arma) {
+    if (static_cast<int>(pocion.size()) +
+        static_cast<int>(armadura.size()) +
+        static_cast<int>(this->arma.size()) < capacidadMaxima) {
         this->arma.push_back(arma);
     } else {
         cout<<"Inventario lleno, no se puede agregar arma"<<endl;
@@ -35,8 +39,10 @@ void Inventario::agregarArma(Arma& arma) {
     }
 }
 
-void Inventario::agregarArmadura(Armadura& armadura) {
-    if ((int)this->pocion.size()+(int)this->armadura.size()+(int)this->arma.size()<capacidadMaxima) {
+void Inventario::agregarArmadura(const Armadura& armadura) {
+    if (static_cast<int>(pocion.size()) +
+        static_cast<int>(this->armadura.size()) +
+        static_cast<int>(arma.size()) < capacidadMaxima) {
         this->armadura.push_back(armadura);
     } else {
         cout<<"Inventario lleno, no se puede agregar armadura"<<endl;
@@ -51,7 +57,8 @@ void Inventario::mostrarInventario() {
         cout<<"No hay pociones"<<endl;
     }else {
         for (size_t i = 0; i < this->pocion.size(); i++) {
-            cout<<"pocion"<<pocion[i].getName()<<endl;  //pocion[i].getName-->lo posiciona
+            cout<<"pociones:\n";
+            cout<<"-"<<pocion[i].getName()<<endl;  //pocion[i].getName-->lo posiciona
         }
 
     }
@@ -61,7 +68,8 @@ void Inventario::mostrarInventario() {
         cout<<"No hay armas"<<endl;
     }else {
         for (size_t i = 0; i < this->arma.size(); i++) {
-            cout<<""<<arma[i].getNombre()<<endl;
+            cout<<"Armas:\n";
+            cout<<"-"<<arma[i].getNombre()<<endl;
         }
     }
     //armaudra
@@ -70,7 +78,8 @@ void Inventario::mostrarInventario() {
         cout<<"No hay armaduras"<<endl;
     }else {
         for (size_t i = 0; i < this->armadura.size(); i++) {
-            cout<<""<<armadura[i].getNombre()<<endl;
+            cout<<"Armadura:\n";
+            cout<<"-"<<armadura[i].getNombre()<<endl;
         }
     }
 }
