@@ -1,12 +1,11 @@
 //
 // Created by majo on 26/05/2025.
 //
-
+#define _GLIBCXX_USE_FLOAT128 0
 #ifndef VILLANO_H
 #define VILLANO_H
-#include"Personaje.h"
 #include<string>
-
+#include"Personaje.h"
 using namespace std;
 
 class Villano:public Personaje{
@@ -15,14 +14,17 @@ private:
 
 public:
     Villano();
-    Villano(const std::string& nombre, string tipo, int s, int su, int a, int def, int vel);
+    Villano(const std::string& nombre, const string& tipo, int s, int su, int a, int def, int vel);
 
     //getter
-    std::string getTipo() const ;
+    [[nodiscard]] std::string getTipo() const ;
     //setter
-    void setTipo(std::string tipo);
+    void setTipo(const std::string& tipo);
 
 };
+
+
+
 
 
 

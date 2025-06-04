@@ -1,7 +1,7 @@
 //
 // Created by majo on 26/05/2025.
 //
-
+#define GLIBCXX_USE_FLOAT128 0
 #include"Pocion.h"
 #include"Heroe.h"
 
@@ -13,7 +13,7 @@ Pocion::Pocion(const std::string& name, const int mejoraSalud, const int mejoraS
 }
 
 //getters
-std::string Pocion::getName() const{
+std::string Pocion::getNombre() const{
     return this->name;
 }
 int Pocion::getMejoraSalud() const {

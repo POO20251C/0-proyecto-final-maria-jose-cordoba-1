@@ -1,6 +1,7 @@
 //
 // Created by majo on 27/05/2025.
 //
+#define _GLIBCXX_USE_FLOAT128 0
 #include<iostream>
 #include "Mazmorra.h"
 #include"Sala.h"
@@ -12,6 +13,7 @@
 Mazmorra::Mazmorra(const vector <Sala>& salas) : salas(salas) {}
 Mazmorra::~Mazmorra() = default;
 
+
 //metodos
 void Mazmorra::recorrerMazmorra(vector<Heroe*> &heroes) {
     int salaActual=0;
@@ -19,6 +21,9 @@ void Mazmorra::recorrerMazmorra(vector<Heroe*> &heroes) {
 
     for (Heroe*& heroe : heroes) {
         saludInicial += heroe->getSalud();
+    }
+    for (size_t i = 0; i < salas.size(); i++) {
+        cout << "Sala " << i + 1 << " tiene " << salas[i].getVillanos().size() << " villano(s)." << endl;
     }
     for (size_t i = 0; i < salas.size(); i++) {
         //recorro las salas
@@ -34,10 +39,10 @@ void Mazmorra::recorrerMazmorra(vector<Heroe*> &heroes) {
                 cin >> opcion;
                 if (opcion==1) {
                     Arma armaEspecial("Espada de fuego", 30,25);
-                    heroe->usarItem(armaEspecial);
+                    heroe->getInventario().agregarArma(armaEspecial);
                 }else if (opcion==2) {
                     Armadura aramduraEspecial("Escudo de Luz",50);
-                    heroe->usarItem(aramduraEspecial);
+                    heroe->getInventario().agregarArmadura(aramduraEspecial);
                 }
 
             }
@@ -48,7 +53,7 @@ void Mazmorra::recorrerMazmorra(vector<Heroe*> &heroes) {
                 Arma armaunica("Hacha legendaria",60,50);
 //reciben +60 ataque / tamien le baje porq noooooo  mucho AJJJA
                 //reciben +50 defensa
-                heroe->getInventario()->agregarArma(armaunica);
+                heroe->getInventario().agregarArma(armaunica);
             }
         }
         else if (i==5) { //sala 6
@@ -65,6 +70,7 @@ void Mazmorra::recorrerMazmorra(vector<Heroe*> &heroes) {
         }
         salaActual=i+1;
     }
+    //esto dice como va de salud
     int saludRestante=0;
     for (Heroe*& heroe : heroes) {
         saludRestante+=heroe->getSalud();

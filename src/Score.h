@@ -1,7 +1,7 @@
 //
 // Created by majo on 27/05/2025.
 //
-
+#define _GLIBCXX_USE_FLOAT128 0
 #ifndef SCORE_H
 #define SCORE_H
 #include<string>

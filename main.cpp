@@ -1,3 +1,4 @@
+#define _GLIBCXX_USE_FLOAT128 0
 #include <iostream>
 #include "Heroe.h"
 #include "Villano.h"
@@ -64,9 +65,9 @@ Pocion ("Tonico de acero", 55, 5),
 Pocion ("Poción del gruadian", 45, 5),
 Pocion ("Brebaje del valiente", 25, 20),
 };
-for (auto i : pociones) {
-inventario.agregarPocion(i);
-}
+//for (auto i : pociones) {
+//inventario.agregarPocion(i);
+//}
 
 //Armas 17
 vector<Arma> armas={
@@ -90,9 +91,9 @@ Arma ("Escudo", 9, 41),
 Arma ("Arma rara",60,50)
 
 };
-for (auto i : armas) {
-inventario.agregarArma(i);
-}
+//for (auto i : armas) {
+//inventario.agregarArma(i);
+//}
 
 //Aramadura 16
 vector<Armadura> armaduras={
@@ -113,9 +114,9 @@ Armadura ("Armadura del Olvido", 39),
 Armadura ("Manto de los Titanes ", 38),
 Armadura ("Armadura de la Eternidad ", 42),
 };
-for (auto i : armaduras) {
-inventario.agregarArmadura(i);
-}
+//for (auto i : armaduras) {
+//inventario.agregarArmadura(i);
+//}
 
 //SALAS
 //vecotres para indicar donde va cada uno
@@ -160,8 +161,7 @@ while (jugando) {
     cin>>opcion;
 
     switch (opcion) {
-        case 1: {
-            vector<Heroe*> heroesElegidos=juego.escogerHeroes();
+        case 1: {    juego.seleccionarHeroes();
             break;
         }
         case 2: {

@@ -1,7 +1,7 @@
 //
 // Created by majo on 26/05/2025.
 //
-
+#define _GLIBCXX_USE_FLOAT128 0
 #ifndef SALA_H
 #define SALA_H
 #include<string>

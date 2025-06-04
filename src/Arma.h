@@ -1,7 +1,7 @@
 //
 // Created by majo on 26/05/2025.
 //
-
+#define GLIBCXX_USE_FLOAT128 0
 #ifndef ARMA_H
 #define ARMA_H
 #include<string>

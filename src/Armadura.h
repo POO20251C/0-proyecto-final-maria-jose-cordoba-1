@@ -1,7 +1,7 @@
 //
 // Created by majo on 26/05/2025.
 //
-
+#define GLIBCXX_USE_FLOAT128 0
 #ifndef ARMADURA_H
 #define ARMADURA_H
 #include<string>

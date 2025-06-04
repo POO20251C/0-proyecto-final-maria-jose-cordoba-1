@@ -2,6 +2,7 @@
 // Created by majo on 26/05/2025.
 //
 
+#define GLIBCXX_USE_FLOAT128 0
 #include"Armadura.h"
 #include"Heroe.h"
 Armadura::Armadura(const std::string& nombre, int mejoraDefensa) {

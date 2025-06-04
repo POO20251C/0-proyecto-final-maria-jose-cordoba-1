@@ -1,7 +1,7 @@
 //
 // Created by majo on 20/05/2025.
 //
-
+#define _GLIBCXX_USE_FLOAT128 0
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
 #include <string>
@@ -38,7 +38,9 @@ public:
 
     //metodos
     void atacar(Personaje& enemigo);   //el & es porque asi se granatiza que se haga el cambio cuando se reciba el daño al ptro personaje
-    void recibirAtaque(int dano);
+    void recibirAtaque(int ataqueEnemigo);
+    int calcularDanoRecibido(int ataqueEnemigo);
+    bool estaVivo() const; //me toco agregarlo proq nunca prepare bien el metood batalla y duhh no puede seguir sin saber si el heroe esta vivo o q
 
 };
 

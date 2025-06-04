@@ -1,7 +1,7 @@
 //
 // Created by majo on 26/05/2025.
 //
-
+#define GLIBCXX_USE_FLOAT128 0
 #ifndef POCION_H
 #define POCION_H
 #include"Heroe.h"
@@ -22,7 +22,7 @@ public:
     Pocion(const std::string& name,int mejoraSalud, int mejoraSuerte);
 
     //getters
-    [[nodiscard]]std::string getName()const;
+    [[nodiscard]]std::string getNombre()const;
     [[nodiscard]]int getMejoraSalud()const;
     [[nodiscard]] int getMejoraSuerte()const;
 

@@ -1,7 +1,7 @@
 //
 // Created by majo on 27/05/2025.
 //
-
+#define _GLIBCXX_USE_FLOAT128 0
 #ifndef MAZMORRA_H
 #define MAZMORRA_H
 #include<vector>
@@ -24,7 +24,7 @@ class Mazmorra {
 
     //metodos
     void recorrerMazmorra(vector<Heroe*>&heroes); //aqui metemos lo de lso regalos epeciales de cada sala
-    void registrarScore(vector<Score>&historialScores, const string &usuario, int salaMaxSuperada, int saludPerdida);//aaa la difernecie de porque aca me toca agregar los paramteros es porq mi clase de score
+    static void registrarScore(vector<Score>&historialScores, const string &usuario, int salaMaxSuperada, int saludPerdida);//aaa la difernecie de porque aca me toca agregar los paramteros es porq mi clase de score
     //solo me giarda los datos, mas que aca si me toca darle valores su los uso y los necesito
     //fehca y hora no se agregan porq no son parametros en si porqye ya se piden
     //tal vez ahcer vector que recorra los scores eso ahora

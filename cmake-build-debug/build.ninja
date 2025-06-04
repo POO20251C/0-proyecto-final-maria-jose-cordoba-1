@@ -50,85 +50,97 @@ cmake_ninja_workdir = C$:/Users/majo/CLionProjects/NatalKombat/cmake-build-debug
 build cmake_object_order_depends_target_NatalKombat: phony || .
 
 build CMakeFiles/NatalKombat.dir/main.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/main.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir
 
 build CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Personaje.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Personaje.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Heroe.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Heroe.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Heroe.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Villano.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Villano.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Villano.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Inventario.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Inventario.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Inventario.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Arma.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Arma.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Arma.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Armadura.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Armadura.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Armadura.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Pocion.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Pocion.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Pocion.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Sala.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Sala.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Mazmorra.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Mazmorra.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Mazmorra.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Score.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Score.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Score.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
 
 build CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj: CXX_COMPILER__NatalKombat_unscanned_Debug C$:/Users/majo/CLionProjects/NatalKombat/src/Juego.cpp || cmake_object_order_depends_target_NatalKombat
+  DEFINES = -D_GLIBCXX_USE_FLOAT128=0
   DEP_FILE = CMakeFiles\NatalKombat.dir\src\Juego.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -mno-avx -g -std=c++20 -fdiagnostics-color=always -U__FLOAT128__ -U__SIZEOF_FLOAT128__
   INCLUDES = -IC:/Users/majo/CLionProjects/NatalKombat/src
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   OBJECT_FILE_DIR = CMakeFiles\NatalKombat.dir\src
@@ -142,7 +154,7 @@ build CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj: CXX_COMPILER__NatalKombat_un
 # Link the executable NatalKombat.exe
 
 build NatalKombat.exe: CXX_EXECUTABLE_LINKER__NatalKombat_Debug CMakeFiles/NatalKombat.dir/main.cpp.obj CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj CMakeFiles/NatalKombat.dir/src/Heroe.cpp.obj CMakeFiles/NatalKombat.dir/src/Villano.cpp.obj CMakeFiles/NatalKombat.dir/src/Inventario.cpp.obj CMakeFiles/NatalKombat.dir/src/Arma.cpp.obj CMakeFiles/NatalKombat.dir/src/Armadura.cpp.obj CMakeFiles/NatalKombat.dir/src/Pocion.cpp.obj CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj CMakeFiles/NatalKombat.dir/src/Mazmorra.cpp.obj CMakeFiles/NatalKombat.dir/src/Score.cpp.obj CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj
-  FLAGS = -g
+  FLAGS = -mno-avx -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\NatalKombat.dir
   POST_BUILD = cd .

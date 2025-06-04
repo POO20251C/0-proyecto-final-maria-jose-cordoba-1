@@ -1,38 +1,41 @@
 //
 // Created by majo on 25/05/2025.
 //
-
+#define GLIBCXX_USE_FLOAT128 0
 #include "Heroe.h"
 #include"Inventario.h"
-#include "Arma.h"
-#include"Armadura.h"
-#include"Pocion.h"
+
 
 Heroe::Heroe(const string& nombre, int s, int su, int a, int def, int vel)
-    : Personaje(nombre,s, su,a,def,vel) {
+    : Personaje(nombre,s, su,a,def,vel),
+    inventario(std::make_unique<Inventario>()) { // Inicialización directa
+    }
 
-}
-Heroe::~Heroe() {
-    delete inventario;
-}
+//Heroe::~Heroe() {
+  //  delete inventario;
+    //inventario = nullptr;
+//}
+
 void Heroe::setNombre(const std::string &nombre) {
     Personaje::setNombre(nombre);
 }
 
 
 //metodo
-void Heroe::usarItem(Inventario& inventario, const string& nombreItem) {
-    inventario.usarItem(nombreItem, *this);  //debo agregar item no he creado clase inventario
-    //this--> puntero
-    //ahora tenemso estos metoods
+void Heroe::usarItem(Inventario& inventarioEquipo, const string& nombreItem) {
+    if (inventarioEquipo.existeItem(nombreItem)) {
+        inventarioEquipo.usarItem(nombreItem, *this);  //debo agregar item no he creado clase inventario
+        //this--> puntero
+        //ahora tenemso estos metoods
+    }
 }
-    void Heroe::usarItem(const Arma& arma) {
+    void Heroe::agregarItem(const Arma& arma) {
         this->inventario->agregarArma(arma);}
 
-void Heroe::usarItem(const Armadura& armadura) {
+void Heroe::agregarItem(const Armadura& armadura) {
     this->inventario->agregarArmadura(armadura);
 }
-void Heroe::usarItem(const Pocion &pocion) {
+void Heroe::agregarItem(const Pocion &pocion) {
     this->inventario->agregarPocion(pocion);
 }
 
@@ -55,4 +58,5 @@ void Heroe::añadirVelocidad(int valor){
 void Heroe::recuperarSaludCompleta() {
     setSalud(100);
 }
+
 

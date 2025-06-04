@@ -1,6 +1,7 @@
 //
 // Created by majo on 26/05/2025.
 //
+#define GLIBCXX_USE_FLOAT128 0
 #include"Arma.h"
 #include"Heroe.h"
 

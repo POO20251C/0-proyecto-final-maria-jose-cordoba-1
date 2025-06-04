@@ -1,7 +1,7 @@
 //
 // Created by majo on 26/05/2025.
 //
-
+#define _GLIBCXX_USE_FLOAT128 0
 #ifndef INVENTARIO_H
 #define INVENTARIO_H
 #include<string>
@@ -25,17 +25,25 @@ private:
     vector<Arma> arma;
     vector<Armadura> armadura;
 
+
 public:
     Inventario();
-    Inventario(int capacidadMaxima);
+    explicit Inventario(int capacidadMaxima);
     //metodos
-    void agregarPocion(const Pocion& pocion); //se pñone Pocion& pocion y no vector<Popcion> pocion como siempre poruqe asi se agrega de a 1 y no de muchos a la vez
-    void agregarArma(const Arma& arma);
-    void agregarArmadura(const Armadura& armadura);
+    bool agregarPocion(const Pocion& pocion); //se pñone Pocion& pocion y no vector<Popcion> pocion como siempre poruqe asi se agrega de a 1 y no de muchos a la vez
+    bool agregarArma(const Arma& arma);
+    bool agregarArmadura(const Armadura& armadura);
     void mostrarInventario();
+    void* buscarItemPorNombre(const string& nombre); //si es un nombre largo pero me toco porq no se como mas ponerle a estos cosos
     void usarItem(const string &item, Heroe &heroe);  //la verdd no sabia q poidia poner olos dos jutnos pero bueno
-                                                    //Heroe &heroe--> referencia de quien lo usa
-
+    //Heroe &heroe--> referencia de quien lo usa
+    bool esPocion(void* item);
+    bool esArmadura(void* item);
+    bool esArma(void* item);
+    void eliminarPocion(const Pocion& pocion);
+    void eliminarArma(const Arma& arma);
+    void eliminarArmadura(const Armadura& armadura);
+    bool existeItem(const std::string& nombre)const;
 
 };
 
