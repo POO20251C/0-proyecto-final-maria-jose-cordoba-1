@@ -1,4 +1,4 @@
-#define _GLIBCXX_USE_FLOAT128 0
+#define GLIBCXX_USE_FLOAT128 0
 #include <iostream>
 #include "Heroe.h"
 #include "Villano.h"

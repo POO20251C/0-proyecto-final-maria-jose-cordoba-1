@@ -5,6 +5,7 @@
 #ifndef POCION_H
 #define POCION_H
 #include"Heroe.h"
+#include<iostream>
 #include<string>
 
 using namespace std;

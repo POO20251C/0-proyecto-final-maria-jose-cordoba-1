@@ -1,8 +1,10 @@
 //
 // Created by majo on 20/05/2025.
 //
-#define _GLIBCXX_USE_FLOAT128 0
+#define GLIBCXX_USE_FLOAT128 0
 #include "Personaje.h"
+#include <iostream>
+#include <ostream>
 
 Personaje::Personaje(const std::string& nombre,int s, int su, int a, int def, int vel) {
     this->nombre=nombre;
@@ -57,7 +59,12 @@ void Personaje::setVelocidad(int vel) {
 //metdos
 
 void Personaje::atacar(Personaje &enemigo) {
+    //enemigo.recibirAtaque(ataque);
+    int dano=enemigo.calcularDanoRecibido(ataque);
     enemigo.recibirAtaque(ataque);
+
+    cout<<nombre<<"Ha atacado a"<<enemigo.getNombre()<<"le causo:"<<dano<<"de dano"<<enemigo.getNombre()<<"ahora tiene "<<enemigo.getSalud()<<"de salud\n"<<endl;
+
 }
 
 void Personaje::recibirAtaque(int ataqueEnemigo) {

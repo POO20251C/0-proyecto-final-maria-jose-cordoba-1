@@ -4,6 +4,7 @@
 
 #define GLIBCXX_USE_FLOAT128 0
 #include"Armadura.h"
+#include"iostream"
 #include"Heroe.h"
 Armadura::Armadura(const std::string& nombre, int mejoraDefensa) {
     this->nombre = nombre;
@@ -27,5 +28,7 @@ void Armadura::setMejoraDef(const int mejoraDefensa) {
 }
 
 void Armadura::aplicarEfecto(Heroe& heroe) {
-    heroe.setDefensa(heroe.getDefensa() + mejoraDefensa);
+    int nuevaDefensa = heroe.getDefensa() + mejoraDefensa;
+    heroe.setDefensa(nuevaDefensa);
+    cout << "La armadura aumentó la defensa a " << nuevaDefensa<< endl;
 }

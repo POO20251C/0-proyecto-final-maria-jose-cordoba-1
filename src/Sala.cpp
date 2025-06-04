@@ -1,7 +1,7 @@
 //
 // Created by majo on 26/05/2025.
 //
-#define _GLIBCXX_USE_FLOAT128 0
+#define GLIBCXX_USE_FLOAT128 0
 #include<iostream>
 #include<limits>
 #include "Sala.h"
@@ -77,7 +77,7 @@ bool Sala::batalla(vector<Heroe*>& heroes) {
                     }
                     int indice;
                     cin >> indice;
-                    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //metodos como numeric limits me toco buscarlos porq hoenstamente no los conocia y me ayudaron a reparar erroes o bueno a ayudar que corirera el codigo :)
                     indice--; // para q vea tipo vil1 o vil 2
 
                     if (indice >= 0 && indice < VillanosAsignados.size() && VillanosAsignados[indice]->getSalud() > 0) {

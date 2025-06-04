@@ -3,6 +3,7 @@
 //
 #define GLIBCXX_USE_FLOAT128 0
 #include "Heroe.h"
+#include<iostream>
 #include"Inventario.h"
 
 
@@ -27,6 +28,11 @@ void Heroe::usarItem(Inventario& inventarioEquipo, const string& nombreItem) {
         inventarioEquipo.usarItem(nombreItem, *this);  //debo agregar item no he creado clase inventario
         //this--> puntero
         //ahora tenemso estos metoods
+        cout<<nombre<<"Ha usado el item"<<nombreItem<<endl;
+
+        //esta es una prubea porq ka verdad no se si esto esta funcionando o no jeje
+        cout << "Nuevo ataque: " << getAtaque() << ", nueva defensa: " << getDefensa() << ", nueva salud: " << getSalud() << ", nueva suerte: " << getSuerte()<<endl;
+
     }
 }
     void Heroe::agregarItem(const Arma& arma) {

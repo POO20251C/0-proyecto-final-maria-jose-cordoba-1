@@ -3,6 +3,7 @@
 //
 #define GLIBCXX_USE_FLOAT128 0
 #include"Arma.h"
+#include<iostream>
 #include"Heroe.h"
 
 
@@ -45,5 +46,6 @@ void Arma::aplicarEfecto(Heroe &h) {
          //pero set-->void tons no funciona
     h.setAtaque(nuevoAtaque);
     h.setDefensa(nuevaDefensa);
-
+    cout << "El arma aumentó el ataque a " << nuevoAtaque
+             << " y la defensa a " << nuevaDefensa << "." << endl;
 }

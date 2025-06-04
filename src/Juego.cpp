@@ -225,12 +225,12 @@ void Juego::mostrarTop5()const {
 
     }
     void Juego::mostrarMenu() {
-        cout<<"Menu principal";
+        cout<<"----Menu principal----";
         cout<<"\n1.Escoger Heroes";
         cout<<"\n2.Iniciar partida";
         cout<<"\n3.Mostrar Top 5 scores";
         cout<<"\n4.Salir";
-    cout<<"Seleccione una opcion"<<endl;
+    cout<<"\n-Seleccione una opcion-"<<endl;
 
     }
     vector<Heroe *> Juego::escogerHeroes() {
