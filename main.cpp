@@ -145,8 +145,12 @@ Sala s10("Sala del Fin",10, villanosSala10);
 
     std::vector<Sala> salas = {s1, s2, s3, s4, s5, s6, s7, s8, s9, s10};
 
+    //pedir usuaruo
+
 //Juego
     Juego juego(salas);
+
+    juego.registrarJugador();
 
     juego.iniciar();
 

@@ -89,6 +89,25 @@ if (VillanosAsignados.empty()) {
                 string nombreItem;
                 getline(cin >> ws, nombreItem);
                 heroeActual->usarItem(heroeActual->getInventario(), nombreItem);
+
+                cout << "¿A qué villano deseas atacar?\n";     //porque me hacia falta q ataca tambien con el item aish
+                for (int i = 0; i < VillanosAsignados.size(); ++i) {
+                    if (VillanosAsignados[i]->getSalud() > 0) {
+                        cout << i + 1 << ". " << VillanosAsignados[i]->getNombre()
+                             << " (Salud: " << VillanosAsignados[i]->getSalud() << ")\n";
+                    }
+                }
+                int indiceVillano;
+                cin >> indiceVillano;
+                cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                indiceVillano--;
+
+                if (indiceVillano >= 0 && indiceVillano < VillanosAsignados.size() && VillanosAsignados[indiceVillano]->getSalud() > 0) {
+                    heroeActual->atacar(*VillanosAsignados[indiceVillano]);
+                } else {
+                    cout << "Villano inválido o ya vencido.\n";
+                }
+            }
             }
 
             // Verificar si ganaste
@@ -132,11 +151,10 @@ if (VillanosAsignados.empty()) {
                 terminarJuego();
                 return false;
             }
-        }
-
         turno = (turno + 1) % totalHeroes;
+        }
     }
-}
+
 
 
 

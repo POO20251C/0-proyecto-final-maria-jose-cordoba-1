@@ -59,12 +59,14 @@ void Personaje::setVelocidad(int vel) {
 //metdos
 
 void Personaje::atacar(Personaje &enemigo) {
-    //enemigo.recibirAtaque(ataque);
-    int dano=enemigo.calcularDanoRecibido(ataque);
     enemigo.recibirAtaque(ataque);
+    //int dano=enemigo.calcularDanoRecibido(getAtaque());
+    //enemigo.recibirAtaque(dano);
 
-    cout<<nombre<<"Ha atacado a"<<enemigo.getNombre()<<"le causo:"<<dano<<"de dano"<<enemigo.getNombre()<<"ahora tiene "<<enemigo.getSalud()<<"de salud\n"<<endl;
+    //cout<<nombre<<"Ha atacado a"<<enemigo.getNombre()<<"le causo:"<<dano<<"de dano"<<enemigo.getNombre()<<"ahora tiene "<<enemigo.getSalud()<<"de salud\n"<<endl;
 
+    cout << nombre << " Ha atacado a " << enemigo.getNombre()
+         << " y le causó daño. Salud ahora: " << enemigo.getSalud() << endl;
 }
 
 void Personaje::recibirAtaque(int ataqueEnemigo) {
@@ -80,7 +82,7 @@ int Personaje::calcularDanoRecibido(int ataqueEnemigo) {
     float factorSuerte=suerte * 0.3f;
 
     int dano=ataqueEnemigo - static_cast<int>(factorDefensa+factorSuerte);
-    if(dano<0) dano=0;
+    if(dano<1) dano=1;
     return dano;
 }
 

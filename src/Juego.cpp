@@ -268,6 +268,16 @@ void Juego::mostrarTop5()const {
         return seleccionados;
     }
 
+void Juego::registrarJugador() {
+    cout<<"Ingresa tu nombre de usuario: ";
+    cin>>usuario;
+    cout<<"Ingresa la fecha (DD-MM-AAAA): ";
+    cin>>fecha;
+    cout<<"Ingresa la hora(HH:MM)";
+    cin>>hora;
+}
+
+
 
 
 

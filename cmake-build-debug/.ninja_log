@@ -57,3 +57,17 @@
 50	1122	7707297363124155	CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj	ba17f10c4c5ae37
 62	1264	7707297363234260	CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj	f9f06b6830054714
 1264	1666	7707297375267207	NatalKombat.exe	7673e4f69df193e4
+37	729	7707311576459721	CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj	dbefd977a352ac83
+79	867	7707311576880758	CMakeFiles/NatalKombat.dir/src/Heroe.cpp.obj	1b1d57a6d000f6eb
+867	1270	7707311584748146	NatalKombat.exe	7673e4f69df193e4
+36	862	7707316468761918	CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj	ba17f10c4c5ae37
+863	1189	7707316477019789	NatalKombat.exe	7673e4f69df193e4
+40	1055	7707327349727653	CMakeFiles/NatalKombat.dir/main.cpp.obj	67a065f90f6fa4a9
+50	1124	7707327349820378	CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj	f9f06b6830054714
+1124	1514	7707327360554165	NatalKombat.exe	7673e4f69df193e4
+48	641	7707331347235308	CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj	dbefd977a352ac83
+642	1018	7707331353172364	NatalKombat.exe	7673e4f69df193e4
+39	1281	7707340239384585	CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj	ba17f10c4c5ae37
+1281	1671	7707340251805646	NatalKombat.exe	7673e4f69df193e4
+45	681	7707345672769627	CMakeFiles/NatalKombat.dir/src/Personaje.cpp.obj	dbefd977a352ac83
+681	1174	7707345679126161	NatalKombat.exe	7673e4f69df193e4

@@ -28,6 +28,9 @@ private:
     std::vector<Armadura> todasArmaduras;
     Inventario inventarioequipo;
     Inventario inventarioTotal;
+    string usuario;
+    string fecha;
+    string hora;
 
 public:
     Juego();
@@ -45,9 +48,10 @@ public:
     void cargarItems();
     void elegirItems(); //la verdad me ha tocado agregar muchas cosas yo no era consicnete de todo lo q me faltaba peor porq como antes no me corria puesss no sabia q funcionaba y q no
                         // me falataba agregar un poco cosas 😭😭
-    std::vector<Heroe*>escogerHeroes(); //{
+    std::vector<Heroe*>escogerHeroes();//{
       // return seleccionados;
     //}; //es mas facil de leer para el codigo !averiguar porqie¡
+    void registrarJugador();
 
 };
 #endif //JUEGO_H
