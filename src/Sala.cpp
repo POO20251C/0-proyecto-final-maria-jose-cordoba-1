@@ -44,103 +44,98 @@ void Sala::setNumeroSala(const int nuS) {
 
 //metodo batalla //si me toco partirlos porq me perdi DURISIMO  //este metodo me esta matando pprq no enteindo porq no funciona
 bool Sala::batalla(vector<Heroe*>& heroes) {
-    // Inventario inventarioHeroes(15);
+if (VillanosAsignados.empty()) {
+        cout << "No hay villano en la sala." << endl;
+        return false;
+    }
 
-    cout<<"\nBATALLA ENNN"<<tipo<<"\n"<< "con enemigo:"<<VillanosAsignados[0]->getNombre()<<endl;
+    cout << "\nBATALLA EN " << tipo << "\nCon enemigo: " << VillanosAsignados[0]->getNombre() << endl;
 
-    //  if (VillanosAsignados.empty()) {
-    //cout << "No hay villano en la sala" << endl;
-    //return false; //cambie esto ahora es con bool por lo de mazmorra y los scores tons se agrega false y true
-    //}
-
+    int turno = 0;
+    int totalHeroes = heroes.size();
+    int turnoVillano = -1; // empezamos en -1 para que el primero sea 0 al sumar 1
 
     while (true) {
-        //srive como para una clase de "bucle"
+        Heroe* heroeActual = heroes[turno];
 
-        for (Heroe* heroe : heroes) {
-            //turnos
-            if (heroe->getSalud()>0) {
-                cout<<"\nTurno de"<<heroe->getNombre()<<"\n";
-                cout<<"Elige \n1. Atacar!\n2.Usar Item\n"; //hice como unas clases de opciones para el jugador durante la battala
-                int opcion;
-                cin>>opcion;
-                cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //me toco agregarleesto
+        if (heroeActual->getSalud() > 0) {
+            cout << "\nTurno de " << heroeActual->getNombre() << "\n";
+            cout << "Elige: \n1. ¡Atacar!\n2. Usar ítem\n";
+            int opcion;
+            cin >> opcion;
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-                if (opcion == 1) {
-                    // Villanos vivos
-                    cout << "¿A qué villano deseas atacar?\n";
-                    for (int i = 0; i < VillanosAsignados.size(); ++i) {
-                        if (VillanosAsignados[i]->getSalud() > 0) {
-                            cout << i + 1 << ". " << VillanosAsignados[i]->getNombre()
-                                 << " (Salud: " << VillanosAsignados[i]->getSalud() << ")\n";
-                        }
-                    }
-                    int indice;
-                    cin >> indice;
-                    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //metodos como numeric limits me toco buscarlos porq hoenstamente no los conocia y me ayudaron a reparar erroes o bueno a ayudar que corirera el codigo :)
-                    indice--; // para q vea tipo vil1 o vil 2
-
-                    if (indice >= 0 && indice < VillanosAsignados.size() && VillanosAsignados[indice]->getSalud() > 0) {
-                        heroe->atacar(*VillanosAsignados[indice]);
-                    } else {
-                        cout << "Villano vencido!!.\n";
-                    }
-                }else if (opcion==2){
-
-                    heroe->getInventario().mostrarInventario();
-                    cout<<"Elige tu item:";
-                    string nombreItem;
-                    getline(cin>>ws,nombreItem); //busqye y es mejor para leer el nombre completo porq repito mucho la primera palabra jeje:)
-
-                    heroe->usarItem(heroe->getInventario(),nombreItem);
-                }
-            }
-        }
-
-        for (Villano* villano : VillanosAsignados) {
-            if (villano->getSalud() > 0) {
-                for (Heroe* h : heroes) {
-                    if (h->getSalud() > 0) {
-                        villano->atacar(*h);
-                        cout << villano->getNombre() << " ataca a " << h->getNombre() << "!\n";
-                        break; // un villano ataca a un héroe por turno
+            if (opcion == 1) {
+                cout << "A qué villano deseas atacar?\n";
+                for (int i = 0; i < VillanosAsignados.size(); ++i) {
+                    if (VillanosAsignados[i]->getSalud() > 0) {
+                        cout << i + 1 << ". " << VillanosAsignados[i]->getNombre()
+                             << " (Salud: " << VillanosAsignados[i]->getSalud() << ")\n";
                     }
                 }
+                int indice;
+                cin >> indice;
+                cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                indice--;
+
+                if (indice >= 0 && indice < VillanosAsignados.size() && VillanosAsignados[indice]->getSalud() > 0) {
+                    heroeActual->atacar(*VillanosAsignados[indice]);
+                } else {
+                    cout << "Villano inválido o ya vencido.\n";
+                }
+            } else if (opcion == 2) {
+                heroeActual->getInventario().mostrarInventario();
+                cout << "Elige tu ítem: ";
+                string nombreItem;
+                getline(cin >> ws, nombreItem);
+                heroeActual->usarItem(heroeActual->getInventario(), nombreItem);
             }
-        } //if (VillanosAsignados[0]->getSalud()>0) {
-        //buscar que queda vivo jeje
-        // for (Heroe* h : heroes) {
-        //  if (h->getSalud()>0) {
-        // VillanosAsignados[0]->atacar(*h);
-        //  cout <<VillanosAsignados[0]->getNombre()<<"ataca a"<<h->getNombre()<<"!\n";
 
-        //ver si ganasteee
-        bool todosMuertos = true;
-        for (Villano* v : VillanosAsignados) {
-            if (v->getSalud() > 0) {
-                todosMuertos = false;
-                break;
+            // Verificar si ganaste
+            bool todosVillanosMuertos = true;
+            for (Villano* v : VillanosAsignados) {
+                if (v->getSalud() > 0) {
+                    todosVillanosMuertos = false;
+                    break;
+                }
+            }
+            if (todosVillanosMuertos) {
+                cout << "\n¡Ganasteee! Venciste a todos los villanos de la sala\n";
+                return true;
+            }
+
+            // Turno de villano
+            int vivos = 0;
+            for (Villano* v : VillanosAsignados) {
+                if (v->getSalud() > 0) vivos++;
+            }
+
+            if (vivos > 0) {
+                for (int i = 0; i < VillanosAsignados.size(); ++i) {
+                    turnoVillano = (turnoVillano + 1) % VillanosAsignados.size();
+                    Villano* villano = VillanosAsignados[turnoVillano];
+                    if (villano->getSalud() > 0) {
+                        villano->atacar(*heroeActual);
+                        cout << villano->getNombre() << " ataca a " << heroeActual->getNombre() << "!!\n";
+                        break;
+                    }
+                }
+            }
+
+            // Verificar si perdiste
+            int heroesMuertos = 0;
+            for (Heroe* hero : heroes) {
+                if (hero->getSalud() <= 0) heroesMuertos++;
+            }
+            if (heroesMuertos >= 2) {
+                cout << "\nGame over ;(";
+                terminarJuego();
+                return false;
             }
         }
-        if (todosMuertos) {
-            cout << "\n¡Ganasteee! Venciste a todos los villanos de la sala\n";
-            return true;
-        }
 
-
-
-        int heroesMuertos=0;
-        for (Heroe* hero : heroes) {
-            if (hero->getSalud()<=0)heroesMuertos++;
-        }
-        if (heroesMuertos>=2) {
-            cout <<"\nGame over ;(";
-            terminarJuego();
-            return false; //false --> pierdes
-        }
-        break;
+        turno = (turno + 1) % totalHeroes;
     }
-    return false;
 }
 
 

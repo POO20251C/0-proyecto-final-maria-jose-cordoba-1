@@ -54,3 +54,6 @@
 48	1785	7707256507422479	CMakeFiles/NatalKombat.dir/main.cpp.obj	67a065f90f6fa4a9
 109	1912	7707256508021787	CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj	f9f06b6830054714
 1912	2560	7707256526059655	NatalKombat.exe	7673e4f69df193e4
+50	1122	7707297363124155	CMakeFiles/NatalKombat.dir/src/Sala.cpp.obj	ba17f10c4c5ae37
+62	1264	7707297363234260	CMakeFiles/NatalKombat.dir/src/Juego.cpp.obj	f9f06b6830054714
+1264	1666	7707297375267207	NatalKombat.exe	7673e4f69df193e4
